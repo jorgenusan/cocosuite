@@ -1,0 +1,80 @@
+{
+    "info": {
+      "description": "Dataset de ejemplo con gato y pájaro",
+      "url": "http://ejemplo.com",
+      "version": "1.0",
+      "year": 2024,
+      "contributor": "Tu nombre",
+      "date_created": "2024-06-23"
+    },
+    "licenses": [
+      {
+        "id": 1,
+        "name": "Licencia de ejemplo",
+        "url": "http://ejemplo.com/licencia"
+      }
+    ],
+    "images": [
+      {
+        "id": 1,
+        "file_name": "imagen1.jpg",
+        "height": 480,
+        "width": 640,
+        "date_captured": "2024-06-23"
+      },
+      {
+        "id": 2,
+        "file_name": "imagen2.jpg",
+        "height": 480,
+        "width": 640,
+        "date_captured": "2024-06-23"
+      }
+    ],
+    "annotations": [
+      {
+        "id": 1,
+        "image_id": 1,
+        "category_id": 1,
+        "bbox": [150, 200, 200, 250],
+        "area": 50000,
+        "iscrowd": 0
+      },
+      {
+        "id": 2,
+        "image_id": 1,
+        "category_id": 2,
+        "bbox": [400, 100, 50, 50],
+        "area": 2500,
+        "iscrowd": 0
+      },
+      {
+        "id": 3,
+        "image_id": 2,
+        "category_id": 1,
+        "bbox": [100, 150, 220, 300],
+        "area": 66000,
+        "iscrowd": 0
+      },
+      {
+        "id": 4,
+        "image_id": 2,
+        "category_id": 2,
+        "bbox": [350, 250, 80, 60],
+        "area": 4800,
+        "iscrowd": 0
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "gato",
+        "supercategory": "animal"
+      },
+      {
+        "id": 2,
+        "name": "pájaro",
+        "supercategory": "animal"
+      }
+    ]
+  }
+  
