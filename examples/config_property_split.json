@@ -1,0 +1,7 @@
+{
+    "criteria": {
+      "file_name": ["imagen1", "imagen2"],
+      "height": [480]
+    },
+    "match_all": true
+  }
