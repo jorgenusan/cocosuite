@@ -1,7 +1,5 @@
 # COCO Toolkit
 
-## Introduction
-
 COCO Toolkit is a collection of tools designed to facilitate the handling and processing of datasets in COCO format.
 
 ## Tools
