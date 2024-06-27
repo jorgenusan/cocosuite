@@ -1,23 +1,26 @@
 import json
 import random
+from pathlib import Path
 
+import fire
 import numpy as np
 from loguru import logger
 
 
 def random_split(
     annotations_file: str,
-    output_filename: str,
+    output_filename: str = "random_split.json",
     train_percentage: float = 0.8,
     seed: int = 47,
-):
-    """Split the input json file into train and val json files based on the train_percentage.
+) -> None:
+    """Split the input json file randomly into train and val.
 
     Args:
         annotations_file (str): JSON file containing COCO formatted data.
-        output_filename (str): Prefix of the output json files.
-        train_percentage (float, optional): Percentage of data to be used for training. Defaults to 0.8.
-        seed (int, optional): Seed for reproducibility. Defaults to 47.
+        output_filename (Optional[str], optional): Name of the output json file. Defaults to None.
+        output_path (Optional[str], optional): Path to save the output file. Defaults to None.
+        train_percentage (Optional[float], optional): Percentage of data to be used for training. Defaults to 0.8.
+        seed (Optional[int], optional): Seed for random number generation. Defaults to 47.
     """
     with open(annotations_file, "r") as f:
         data = json.load(f)
@@ -58,8 +61,19 @@ def random_split(
         else:
             val_data["annotations"].append(ann)
 
+    file_name = Path(output_filename).stem
+    if len(output_filename.rsplit("/", 1)) >= 2:
+        file_path = Path(output_filename).parent
+    else:
+        file_path = Path(annotations_file).parent
+
     for data_type, data in [("train", train_data), ("val", val_data)]:
-        file_path = f"{output_filename}_{data_type}.json"
-        with open(file_path, "w", encoding="utf-8") as f:
+        type_file_name = f"{file_name}_{data_type}.json"
+        output_file = Path(file_path, type_file_name)
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        logger.info(f"Saved split into {file_path}")
+        logger.info(f"Saved split into {type_file_name}")
+
+
+if __name__ == "__main__":
+    fire.Fire(random_split)
