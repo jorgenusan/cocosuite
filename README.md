@@ -1,9 +1,9 @@
-# coco-edit-suite
+# COCO Toolkit
 
 ## Installation
 
 ```bash
 git clone git@github.com:jorgenusan/cocotools.git
 cd cocotools
-python3 -m pip install .
+pip3 install -r requirements.txt
 ```
