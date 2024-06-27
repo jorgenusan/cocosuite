@@ -59,7 +59,7 @@ Here is an example for each of these cases:
 
     ```json
     "filter": {
-      "file_name": ["imagen1", "imagen2"],
+      "file_name": ["image1", "image2"],
       "height": [480]
     },
     "match_all": true

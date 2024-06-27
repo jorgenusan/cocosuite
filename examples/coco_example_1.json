@@ -1,30 +1,30 @@
 {
   "info": {
-    "description": "Dataset de ejemplo",
-    "url": "http://ejemplo.com",
+    "description": "Example dataset with dog and cat",
+    "url": "http://example.com",
     "version": "1.0",
     "year": 2024,
-    "contributor": "ejemplo",
+    "contributor": "example",
     "date_created": "2024-06-23"
   },
   "licenses": [
     {
       "id": 1,
-      "name": "Licencia de ejemplo",
-      "url": "http://ejemplo.com/licencia"
+      "name": "Example licence",
+      "url": "http://example.com/license"
     }
   ],
   "images": [
-    {"id": 0, "file_name": "imagen1.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 1, "file_name": "imagen2.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 2, "file_name": "imagen3.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 3, "file_name": "imagen4.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 4, "file_name": "imagen5.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 5, "file_name": "imagen6.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 6, "file_name": "imagen7.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 7, "file_name": "imagen8.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 8, "file_name": "imagen9.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
-    {"id": 9, "file_name": "imagen10.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"}
+    {"id": 0, "file_name": "image1.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 1, "file_name": "image2.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 2, "file_name": "image3.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 3, "file_name": "image4.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 4, "file_name": "image5.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 5, "file_name": "image6.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 6, "file_name": "image7.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 7, "file_name": "image8.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 8, "file_name": "image9.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"},
+    {"id": 9, "file_name": "image10.jpg", "height": 480, "width": 640, "date_captured": "2024-06-23"}
   ],
   "annotations": [
     {"id": 0, "image_id": 0, "category_id": 1, "bbox": [10, 20, 30, 40], "area": 1200, "iscrowd": 0},
@@ -49,7 +49,7 @@
     {"id": 19, "image_id": 9, "category_id": 2, "bbox": [50, 60, 30, 40], "area": 1200, "iscrowd": 0}
   ],
   "categories": [
-    {"id": 1, "name": "perro", "supercategory": "animal"},
-    {"id": 2, "name": "gato", "supercategory": "animal"}
+    {"id": 1, "name": "dog", "supercategory": "animal"},
+    {"id": 2, "name": "cat", "supercategory": "animal"}
   ]
 }
