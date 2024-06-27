@@ -48,7 +48,6 @@ Here is an example for each of these cases:
 1. property_split
 
    ```json
-   # split_config.json
     "criteria": {
       "file_name": ["image1", "image2"],
       "height": [480]
@@ -59,7 +58,6 @@ Here is an example for each of these cases:
 2. coco_filter
 
     ```json
-    # filter_config.json
     "filter": {
       "file_name": ["imagen1", "imagen2"],
       "height": [480]
@@ -68,5 +66,5 @@ Here is an example for each of these cases:
    ```
 
 > [!NOTE]
-> the `match_all` property, when set to `true` means that both properties have to match in order to filter or split a new file.<br>
+> the **match_all** property, when set to `true` means that both properties have to match in order to filter or split a new file.<br>
 > If set to `false`, it filters or splits for each property.
