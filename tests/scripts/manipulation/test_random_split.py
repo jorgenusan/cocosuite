@@ -76,7 +76,7 @@ def test_random_split_coco_format(
         input_json_path = project_root_path / "examples" / input_json
         output_file = Path(temp_dir) / "random_split_output"
 
-        random_split(input_json_path, output_file, train_percentage, seed)
+        random_split(str(input_json_path), str(output_file), train_percentage, seed)
 
         with open(f"{output_file}_train.json", "r") as f:
             train_data = json.load(f)
