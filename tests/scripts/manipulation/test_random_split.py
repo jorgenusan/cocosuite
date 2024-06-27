@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from cocotools.scripts.manipulation.random_split import random_split
+from cocotoolkit.scripts.manipulation.random_split import random_split
 
 
 @pytest.mark.parametrize(
