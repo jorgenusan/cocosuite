@@ -77,16 +77,14 @@ def coco_merge(
         )
     )
 
-    if len(output_filename.rsplit("/", 1)) >= 2:
-        file_path = Path(output_filename).parent
-    else:
+    if len(output_filename.rsplit("/", 1)) < 2:
         file_path = Path(annotations_file_1).parent
+        output_filename = str(Path(file_path, output_filename))
 
-    output_file = Path(file_path, output_filename)
-    with open(output_file, "w", encoding="utf-8") as f:
+    with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    return str(output_file)
+    return str(output_filename)
 
 
 if __name__ == "__main__":
