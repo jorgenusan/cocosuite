@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-git clone git@github.com:jorgenusan/cocotools.git
+git clone https://github.com/jorgenusan/cocotoolkit.git
 cd cocotools
 pip3 install -r requirements.txt
 ```
