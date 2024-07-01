@@ -1,6 +1,5 @@
 numpy==2.0.0
 matplotlib==3.9.0
-pycocotools==2.0.8
 pre-commit==3.7.1
 loguru==0.7.2
 pytest==8.2.2

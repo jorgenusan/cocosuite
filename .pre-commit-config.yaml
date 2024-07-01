@@ -32,4 +32,4 @@ repos:
     rev: v0.1.3
     hooks:
       - id: pydepcheck
-        args: ['--env-file', 'requirements.txt', '--env-name', 'cocotools']
+        args: ['--env-file', 'requirements.txt', '--env-name', 'cocosuite']

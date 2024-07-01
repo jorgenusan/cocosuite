@@ -1,22 +1,22 @@
-# COCO Toolkit
+# COCOSuite
 
-COCO Toolkit is a collection of tools designed to facilitate the handling and processing of datasets in COCO format.
+COCOSuite is a comprehensive collection of tools designed to facilitate the management and manipulation of datasets in COCO format.
 
 ## Tools
 
 | Tool | Description |
 | ---- | ----------- |
-| [coco_merge](./cocotoolkit/scripts/manipulation/coco_merge.py) | Merge two COCO datasets into a single one |
-| [merge_multiple](./cocotoolkit/scripts/manipulation/merge_multiple_coco_files.py) | Allows merging of multiple COCO files into a single dataset |
-| [random_split](./cocotoolkit/scripts/manipulation/random_split.py) | Performs a random division of the dataset into training and validation subsets, configurable in terms of data proportion. |
-| [property_split](./cocotoolkit/scripts/manipulation/property_split.py) | Divides a COCO dataset into training and validation sets according to specific image properties |
-| [coco_filter](./cocotoolkit/scripts/manipulation/coco_filter.py) | Filters a COCO dataset based on certain criteria |
+| [coco_merge](./cocosuite/scripts/manipulation/coco_merge.py) | Merge two COCO datasets into a single one |
+| [merge_multiple](./cocosuite/scripts/manipulation/merge_multiple_coco_files.py) | Allows merging of multiple COCO files into a single dataset |
+| [random_split](./cocosuite/scripts/manipulation/random_split.py) | Performs a random division of the dataset into training and validation subsets, configurable in terms of data proportion. |
+| [property_split](./cocosuite/scripts/manipulation/property_split.py) | Divides a COCO dataset into training and validation sets according to specific image properties |
+| [coco_filter](./cocosuite/scripts/manipulation/coco_filter.py) | Filters a COCO dataset based on certain criteria |
 
 ## Installation
 
 ```bash
-git clone https://github.com/jorgenusan/cocotoolkit.git
-cd cocotools
+git clone https://github.com/jorgenusan/cocosuite.git
+cd cocosuite
 pip3 install -r requirements.txt
 ```
 
@@ -28,7 +28,7 @@ pip3 install -r requirements.txt
 ### Basic example
 
 ```bash
-python3 /cocotoolkit/scripts/manipulation/coco_merge.py <annotations_file_1> <annotations_file_2> <output_filename>
+python3 /cocosuite/scripts/manipulation/coco_merge.py <annotations_file_1> <annotations_file_2> <output_filename>
 ```
 
 ### config_split
@@ -36,7 +36,7 @@ python3 /cocotoolkit/scripts/manipulation/coco_merge.py <annotations_file_1> <an
 Applies to **property_split** and **coco_filter**
 
 ```bash
-python3 /cocotoolkit/scripts/manipulation/property_split.py <annotations_file> <config_split>
+python3 /cocosuite/scripts/manipulation/property_split.py <annotations_file> <config_split>
 ```
 
 For these scripts you have to pass a configuration file with the criteria for separating the data in the case of **property_split** and the criteria for filtering in the case of **coco_filter**.
