@@ -14,11 +14,23 @@ COCOSuite is a comprehensive collection of tools designed to facilitate the mana
 
 ## Installation
 
-```bash
-git clone https://github.com/jorgenusan/cocosuite.git
-cd cocosuite
-pip3 install -r requirements.txt
-```
+- Pip
+
+  Install COCOSuite directly from PyPI:
+
+  ```bash
+  pip install cocosuite
+  ```
+
+- Source
+
+  Clone the repository and install the dependencies:
+
+  ```bash
+  git clone https://github.com/jorgenusan/cocosuite.git
+  cd cocosuite
+  pip install -r requirements.txt
+  ```
 
 ## Usage
 
