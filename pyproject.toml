@@ -1,0 +1,39 @@
+[project]
+name = "cocosuite"
+version = "0.1.0"
+description = "A toolkit for COCO dataset"
+authors = [
+    {name = "Jorge Núñez Santiago", email = "jorge.nusan@gmail.com"},
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "numpy==2.0.0",
+    "matplotlib==3.9.0",
+    "pre-commit==3.7.1",
+    "loguru==0.7.2",
+    "pytest==8.2.2",
+    "fire==0.6.0",
+    "pathlib==1.0.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/jorgenusan/cocosuite"
+Issues = "https://github.com/jorgenusan/cocosuite/issues"
+Documentation = "https://github.com/jorgenusan/cocosuite/blob/main/README.md"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
