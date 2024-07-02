@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 import fire
-from coco_merge import coco_merge
+from cocosuite.scripts.manipulation.coco_merge import coco_merge
 from loguru import logger
 
 
