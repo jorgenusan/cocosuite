@@ -2,8 +2,9 @@ import json
 from pathlib import Path
 
 import fire
-from cocosuite.scripts.manipulation.coco_merge import coco_merge
 from loguru import logger
+
+from cocosuite.scripts.manipulation.coco_merge import coco_merge
 
 
 def add_ann_folder_to_img_name(ann_file: str) -> str:
