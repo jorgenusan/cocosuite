@@ -7,40 +7,36 @@ import pytest
 from cocosuite.scripts.manipulation.random_split import random_split
 
 
-@pytest.mark.parametrize(
-    "input_json",
-    [
-        "coco_example_1.json",
-        "coco_example_2.json",
-    ],
-)
-def test_random_split_output_files(input_json, project_root_path):
+def test_random_split_output_files(sample_data):
     with tempfile.TemporaryDirectory() as temp_dir:
-        input_json_path = project_root_path / "examples" / input_json
-        output_file = Path(temp_dir) / "random_split_output"
+        temp_dir_path = Path(temp_dir)
+        temp_file = temp_dir_path / "sample_data.json"
+        temp_file.write_text(json.dumps(sample_data))
 
-        random_split(
-            str(input_json_path), str(output_file), train_percentage=0.8, seed=47
-        )
+        output_file = temp_dir_path / "random_split_output"
+
+        random_split(str(temp_file), str(output_file), train_percentage=0.8, seed=47)
 
         assert Path(f"{output_file}_train.json").exists()
         assert Path(f"{output_file}_val.json").exists()
 
 
 @pytest.mark.parametrize(
-    "input_json, train_percentage",
+    "train_percentage",
     [
-        ("coco_example_1.json", 0.7),
-        ("coco_example_2.json", 0.9),
+        0.7,
+        0.9,
     ],
 )
-def test_random_split_proportions(input_json, train_percentage, project_root_path):
+def test_random_split_proportions(train_percentage, sample_data):
     with tempfile.TemporaryDirectory() as temp_dir:
-        input_json_path = project_root_path / "examples" / input_json
-        output_file = Path(temp_dir) / "random_split_output"
+        temp_dir_path = Path(temp_dir)
+        temp_file = temp_dir_path / "sample_data.json"
+        temp_file.write_text(json.dumps(sample_data))
+        output_file = temp_dir_path / "random_split_output"
 
         random_split(
-            str(input_json_path),
+            str(temp_file),
             str(output_file),
             train_percentage=train_percentage,
             seed=47,
@@ -63,20 +59,20 @@ def test_random_split_proportions(input_json, train_percentage, project_root_pat
 
 
 @pytest.mark.parametrize(
-    "input_json, train_percentage, seed",
+    "train_percentage, seed",
     [
-        ("coco_example_1.json", 0.7, 47),
-        ("coco_example_2.json", 0.9, 23),
+        (0.7, 47),
+        (0.9, 23),
     ],
 )
-def test_random_split_coco_format(
-    input_json, train_percentage, seed, project_root_path
-):
+def test_random_split_coco_format(train_percentage, seed, sample_data):
     with tempfile.TemporaryDirectory() as temp_dir:
-        input_json_path = project_root_path / "examples" / input_json
-        output_file = Path(temp_dir) / "random_split_output"
+        temp_dir_path = Path(temp_dir)
+        temp_file = temp_dir_path / "sample_data.json"
+        temp_file.write_text(json.dumps(sample_data))
+        output_file = temp_dir_path / "random_split_output"
 
-        random_split(str(input_json_path), str(output_file), train_percentage, seed)
+        random_split(str(temp_file), str(output_file), train_percentage, seed)
 
         with open(f"{output_file}_train.json", "r") as f:
             train_data = json.load(f)
