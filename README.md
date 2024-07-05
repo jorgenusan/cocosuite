@@ -8,9 +8,9 @@ COCOSuite is a comprehensive collection of tools designed to facilitate the mana
 | ---- | ----------- |
 | [coco_merge](./cocosuite/scripts/manipulation/coco_merge.py) | Merge two COCO datasets into a single one |
 | [merge_multiple](./cocosuite/scripts/manipulation/merge_multiple_coco_files.py) | Allows merging of multiple COCO files into a single dataset |
-| [random_split](./cocosuite/scripts/manipulation/random_split.py) | Performs a random division of the dataset into training and validation subsets, configurable in terms of data proportion. |
-| [property_split](./cocosuite/scripts/manipulation/property_split.py) | Divides a COCO dataset into training and validation sets according to specific image properties |
+| [coco_split](./cocosuite/scripts/manipulation/coco_split.py) | It consists of two functions, **`random_split`** performs a random division of the dataset into training and validation subsets, configurable in terms of data proportion, and **`property_split`** divides a COCO dataset into training and validation sets according to specific image properties |
 | [coco_filter](./cocosuite/scripts/manipulation/coco_filter.py) | Filters a COCO dataset based on certain criteria |
+| [visualization](./cocosuite/scripts/visualization/visualization.py) | A series of visualization charts for analyzing and understanding data distributions, image sizes, annotation counts, and bounding box sizes within a dataset. |
 
 ## Installation
 
