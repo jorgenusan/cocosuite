@@ -59,7 +59,7 @@ def test_delete_merged_files(sample_data):
     with TemporaryDirectory() as temp_dir:
         temp_files = []
         for i in range(2):
-            temp_file = Path(temp_dir) / f"example_{i+1}.json"
+            temp_file = Path(temp_dir) / f"example_{i + 1}.json"
             temp_file.write_text(json.dumps(sample_data))
             temp_files.append(str(temp_file))
 
